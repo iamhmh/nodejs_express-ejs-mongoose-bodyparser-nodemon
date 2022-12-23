@@ -1,0 +1,61 @@
+<%- include('../partials/head_reservation') %>
+
+<div class="split left" style="background-image: url(images/fond_reservation.jpg);">
+    <a href="/index"><h1 class="title">Les beaux arts.</h1></a>
+    <h1 class="description">Réserver <br>une table.</h1>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/lacarte">LA CARTE</a></li>
+                <li><a href="#">LA CAVE</a></li>
+                <li><a href="#">LOCALISATION</a></li>
+                <li><a href="/reservation">RESERVER UNE TABLE</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="split right">
+    <!--Burger Menu-->
+    <%- include('../partials/header') %>
+    <!--formulaire de reservation -->
+    <div class="centered">
+        <div class="text_reservation">
+            <h2>Réservez votre table.</h2>
+            <p>Notre espace de restauration est contemporain. Pour refléter cet environnement, nous maintenons un dress-code formelle.</p>
+        </div>
+        <!--formulaire de réservation-->
+        <form action="/reservation" method="POST">
+            <div class="elem-group">
+                <label for="name" style="color: white; font-size: small; display: flex;">Nom</label>
+                <input type="text" id="" name="name" placeholder="Entrez votre nom">
+            </div>
+            <div class="elem-group">
+                <label for="number" style="color: white; font-size: small; display: flex;">Téléphone</label>
+                <input type="text" id="" name="number" placeholder="Entrez votre numéro.">
+            </div>
+            <div class="elem-group">
+                <label for="nomber" style="color: white; font-size: small; display: flex;">Nombre de convives</label>
+                <input type="text" id="" name="nbpeople" placeholder="2" pattern={1,20}>
+            </div>
+            <div class="elem-group">
+                <div class="elem-group inlined">
+                    <label for="date" style="color: white; font-size: small; display: flex;">Date</label>
+                    <input type="date" id="start" name="date" value="2022-12-16" min="2022-01-01" max="2022-12-31">
+                </div>
+                <div class="elem-group inlined">
+                    <label for="heure" style="color: white; font-size: small; display: flex;">Heure</label>
+                    <input id="appt-time" type="time" name="time" value="18:30">
+                </div>
+            </div>
+            <div class="elem-group">
+                <label for="text" style="color: white; font-size: small; display: flex;">Commentaire</label>
+                <input type="text" id="" name="comment" placeholder="Entrez des instructions pour votre réservation.">
+            </div>
+            <button type="submit">RESERVER</button>
+        </form>
+    </div>
+</div>
+
+
+<%- include('../partials/footer') %>

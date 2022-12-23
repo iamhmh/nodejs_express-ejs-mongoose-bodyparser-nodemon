@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+.homepage {
+    position: relative; 
+    height: 100%;
+}
+/* menu burger */
+.sidenav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: -100%;
+    background-color: #FACE8D;
+    padding-top: 60px;
+    transition: left 0.8s ease;
+}
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    width: 50%;
+}
+.sidenav li {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.sidenav a {
+    padding: 0 auto;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000000;
+    display: block;
+    width: 400px;
+    font-family: 'Abhaya Libre', serif;
+}
+.sidenav>ul>li a:hover {
+    box-shadow:inset 400px 0 0 0 #000000;
+    transition: 1s;
+    color: #FACE8D;
+}
+.sidenav.active {
+    left: 0;
+}
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    display: flex;
+    justify-content: end;
+}
+.sidenav .close:hover {
+    color: #000000;
+    cursor: pointer;
+}
+.burger-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5rem;
+    z-index: 2;
+    cursor: pointer;
+}
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #FACE8D;
+    margin: 6px 0;
+}
+/* toute la page */
+.imgbg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%;
+    height: 200%;
+  }
+.imgbg img {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    align-items: center;
+}
+.title {
+    position: absolute;
+    color: white;
+    margin-top: 1%;
+    left: 40%;
+    z-index: 2;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Karla', sans-serif;
+}
+.description {
+    position: absolute;
+    color: #FACE8D;
+    margin-top: 14%; 
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    font-size: 5rem;
+    line-height: 0.9em;
+    font-family: 'Abhaya Libre', serif;
+}
+.horaire {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    margin-top: 33%;
+    z-index: 2;
+    width: 13%;
+    left: 43%;
+    font-family: 'Abhaya Libre', serif;
+}
+.horaire p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.horaire h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+@media (max-width: 1250px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 4rem;
+    }
+    .horaire {
+        margin-top: 37%;
+        width: 15%;
+        left: 42%;
+    }
+    .horaire p {
+        font-size: 0.8rem;
+    }
+    .horaire h2 {
+        font-size: 1.2rem;
+    }
+    nav {
+        margin-left: 25%;
+        margin-top: 55%;
+        height: 40px;
+    }
+    a {
+        font-size: 1rem;
+    }
+    nav>ul>li>a:hover {
+        height: 30px;
+    }
+}
+@media (max-width: 1000px) {
+    .title {
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 3rem;
+    }
+    .horaire {
+        margin-top: 35%;
+        width: 17%;
+        left: 41%;
+    }
+    .horaire p {
+        font-size: 0.7rem;
+    }
+    .horaire h2 {
+        font-size: 1rem;
+    }
+    nav {
+        margin-left: 24%;
+        margin-top: 49%;
+        height: 30px;
+    }
+    a {
+        font-size: 0.8rem;
+    }
+    nav>ul>li>a:hover {
+        height: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .description {
+        font-size: 2.5rem;
+    }
+    .horaire {
+        margin-top: 35%;
+        width: 20%;
+        left: 40%;
+    }
+    .horaire p {
+        font-size: 0.6rem;
+    }
+    .horaire h2 {
+        font-size: 0.8rem;
+    }
+    nav {
+        margin-left: 21.5%;
+        margin-top: 47%;
+        height: 20px;
+    }
+    a {
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 600px) {
+    .title {
+        font-size: 1rem;
+    }
+    .description {
+        font-size: 2rem;
+    }
+    .horaire {
+        margin-top: 35%;
+        width: 25%;
+        left: 37.5%;
+    }
+    .horaire p {
+        font-size: 0.5rem;
+    }
+    .horaire h2 {
+        font-size: 0.7rem;
+    }
+    nav {
+        margin-left: 18%;
+        margin-top: 45%;
+        height: 15px;
+    }
+    a {
+        font-size: 0.5rem;
+    }
+    nav>ul>li>a:hover {
+        height: 10px;
+    }
+}
+@media (max-width: 430px) {
+    .title {
+        font-size: 2rem;
+    }
+    .description {
+        margin-top: 40%;
+        font-size: 2.55rem;
+    }
+    .horaire {
+        margin-top: 100%;
+        width: 35%;
+        left: 33%;
+    }
+    .horaire p {
+        font-size: 0.8rem;
+    }
+    .horaire h2 {
+        font-size: 1rem;
+    }
+    nav {
+        margin-left: 1%;
+        margin-top: 150%;
+        height: 40px;
+    }
+    a {
+        font-size: 0.6rem;
+    }
+}
+.col {
+    padding: 0 !important;
+    width: 960px;
+}

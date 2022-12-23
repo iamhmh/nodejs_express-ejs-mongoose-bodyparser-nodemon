@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+/* découpage droit et gauche */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.left {
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.right {
+    right: 0;
+    background-color: rgb(22, 22, 22);
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* côté gauche */
+.title {
+    color: white;
+    font-family: 'Karla', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.description {
+    color: #FACE8D;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Abhaya Libre', serif;
+    line-height: 1em;
+    margin-top: 30%;
+}
+a {
+    text-decoration: none !important;
+    font-size: 1.2rem;
+    font-family: 'Abhaya Libre', serif;
+}
+ul {
+    list-style-type: none;
+}
+nav{
+    margin-left: 15%;
+    height: 60px;
+    margin-top: 25%;
+}
+nav>ul{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 18px;
+    border-radius: 35px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+nav>ul>li{
+    transition: 1s;
+    margin: 0 5px;
+}
+nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+nav>ul>li>a:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: 0.7s;
+}
+/* côté droit */
+/* menu burger */
+.sidenav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: -100%;
+    background-color: #FACE8D;
+    padding-top: 60px;
+    transition: left 0.8s ease;
+}
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    width: 50%;
+}
+.sidenav li {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.sidenav a {
+    padding: 0 auto;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000000;
+    display: block;
+    width: 400px;
+    font-family: 'Abhaya Libre', serif;
+}
+.sidenav>ul>li a:hover {
+    box-shadow:inset 400px 0 0 0 #000000;
+    transition: 1s;
+    color: #FACE8D;
+}
+.sidenav.active {
+    left: 0;
+}
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    display: flex;
+    justify-content: end;
+}
+.sidenav .close:hover {
+    color: #000000;
+    cursor: pointer;
+}
+.burger-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5rem;
+    z-index: 2;
+    cursor: pointer;
+}
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #FACE8D;
+    margin: 6px 0;
+}
+/* formulaire de reservation */
+.text_reservation {
+    color: white;
+    font-family: 'Abhaya Libre', serif;
+}
+.text_reservation p {
+    width: 450px;
+}
+div.elem-group {
+    margin: 15px 0;
+}
+div.elem-group.inlined {
+    width: 49.5%;
+    display: inline-block;
+}
+label {
+    display: flex;
+    flex-direction: start;
+    padding-bottom: 10px;
+    font-size: 1.25em;
+}
+input{
+    border-radius: 15px;
+    border: 1px solid #F8D49E;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+input:hover {
+    outline:0px !important;
+    box-shadow: none !important;
+}
+input:focus {
+    outline:0px !important;
+    box-shadow: none !important;
+}
+div.elem-group.inlined input {
+    width: 100%;
+    display: inline-block;
+}
+button {
+    height: 40px;
+    width: 100%;
+    background: #f8d49e;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.25em;
+    border-radius: 15px !important;
+    cursor: pointer;
+}
+/* Media Queries */
+@media (min-width: 1000px) {
+    .burger-icon {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    div.left {
+        display: none;
+    }
+    div.right {
+        width: 100%;
+        left: 0;
+    }
+}
+@media (max-width: 500px) {
+    .text_reservation p {
+        width: 355px;
+    }
+    div.elem-group{
+        width: 80%;
+        margin: 15px auto;
+    }
+    .sidenav a {
+        width: 300px;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width: 400px) {
+    div.elem-group{
+        width: 60%;
+        margin: 15px auto;
+    }
+}
